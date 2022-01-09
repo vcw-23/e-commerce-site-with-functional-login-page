@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING</title>
+    <link rel="stylesheet" href="css/store.css">
+    <script src="js/store.js"></script>
+
+</head> 
+<body>
+   <section class="navigation">
+       <img src="Images/logo.png" alt="">
+    <div class="navigationlinks">
+        <a href="#">HOME</a>
+        <a href="login.html">LOGOUT</a>
+        <a href="#">CUSTOMER SERVICE</a>
+        <a href="#">CONTACT</a>
+        
+    </div>
+    <div class="spacer"></div>
+    <div class="searchContainer">
+        <input type="search" placeholder="Search Products" class="searchfield" onkeyup="showResult(this.value)">
+        <div id="search"></div>
+    </div>
+   
+    <button class="viewcart" id="showmycart" onclick="showCart()">View cart</button>
+   </section>
+   <section class="main">
+       <div class="products">
+           <div class="productdescription"> 
+           <div class="productimg">
+               <div class="image">
+        <div class="slideshow-container">
+        
+            <div class="mySlides fade">               
+                <img src="Images/16501.jpg" >
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="Images/16502.jpg" >
+            </div>
+        
+            <div class="mySlides fade">
+                <img src="Images/16503.jpg" >
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div class="preview" style="text-align:center">
+            <div class="imgpreview" onclick="currentSlide(1)">
+                <img src="images/16501.jpg" alt="">
+            </div>
+            <div class="imgpreview" onclick="currentSlide(2)">
+                <img src="images/16502.jpg" alt="">
+
+            </div>
+            <div class="imgpreview" onclick="currentSlide(3)">
+                <img src="images/16503.jpg" alt="">
+
+            </div>
+        </div>
+               </div>
+            <select name="filter1" id="f1" onchange="filterA(this.value)">
+                <option value="mini">Mini(2 fan)</option>
+                <option value="full">Full(3 fan)</option>
+            </select>
+            <select name="filter2" id="f2">
+                <option value="gfxcard1">4 GB</option>
+                <option value="gfxcard2">6 GB</option>
+            </select>
+           </div>
+           <div class="productinfo">
+              <h5 class="productname">MSI GeForce GTX 1650 D6 Ventus XS OCV1 4GB GDDR6 128 bit PCI Express x16 3.0 Gaming Graphic Card</h5> 
+              <div class="addtocart">
+                  <p class="price">$1129</p>
+                                <button class="atc"
+                                    onclick="addToCart('MSI GeForce GTX 1650 D6 Ventus XS OCV1 4GB GDDR6 128 bit PCI Express x16 3.0 Gaming Graphic Card','$1129','Images/16501.jpg')">Add to
+                                    cart</button>
+
+              </div>
+              <ul class="productfeatures">
+                  <li class="feature">Core/Memory : Boost Clock / Memory Speed, 1620 MHz / 12 Gbps</li>
+                  <li class="feature">DL-DVI-D x 1 / DisplayPort x 1 (v1.4) / HDMI 2.0b x 1
+                OC Scanner: An automated function finds the highest stable overclock settings.</li>
+                  <li class="feature">Kombustor: The latest DirectX versions benchmark supporting.</li>
+                  <li class="feature">Capture and share videos, screenshots, and livestreams with friends. Keep your drivers up to date and optimize your game
+                settings.</li>
+              </ul>
+          </div>
+       </div>
+        <h5 class="recomendedheader">You may also like...</h5>
+       <div class="recomendedproducts">
+        
+
+           <div class="productcard">
+               <img src="Images/asusp1.jpg" alt="" class="productcardimg">
+               <h5 class="productcardname" >ASUS TUF Gaming A520M-Plus AMD AM4 Micro-ATX Motherboard</h5>
+               <div class="addtocartproduct">
+                <p class="price">$150</p>
+                <button class="atc" onclick="addToCart('ASUS TUF Gaming A520M-Plus AMD AM4 Micro-ATX Motherboard','$150','Images/asusp1.jpg')">Add to cart</button>
+            </div>
+               
+           </div>
+           <div class="productcard">
+            <img src="Images/asusp2.jpg" alt="" class="productcardimg">
+            <h5 class="productcardname">ASUS ROG Strix B550-F AMD AM4 3rd Gen Ryzen ATX Gaming Motherboard</h5>
+            <div class="addtocartproduct">
+                <p class="price">$310</p>
+                                <button class="atc"
+                                    onclick="addToCart('ASUS ROG Strix B550-F AMD AM4 3rd Gen Ryzen ATX Gaming Motherboard','$310','Images/asusp2.jpg')">Add to
+                                    cart</button>
+
+            </div>
+            
+        </div>
+        <div class="productcard">
+            <img src="Images/zotacp1.jpg" alt="" class="productcardimg">
+            <h5 class="productcardname">ZOTAC Gaming GeForce RTX 3060 Twin Edge OC 12GB GDDR6 Gaming Graphics Card</h5>
+            <div class="addtocartproduct">
+                <p class="price">$1100</p>
+                                <button class="atc"
+                                    onclick="addToCart('ZOTAC Gaming GeForce RTX 3060 Twin Edge OC 12GB GDDR6 Gaming Graphics Card','$1100','Images/zotacp1.jpg')">Add to
+                                    cart</button>
+
+            </div>
+            
+        </div>
+        <div class="productcard">
+            <img src="Images/relatedproduct3.jpg" alt="" class="productcardimg">
+            <h5 class="productcardname">GIGABYTE AUROS Z490 PRO AX Durable Motherboard</h5>
+            <div class="addtocartproduct">
+                <p class="price">$260</p>
+                            <button class="atc"
+                                onclick="addToCart('GIGABYTE AUROS Z490 PRO AX Durable Motherboard','$260','Images/relatedproduct3.jpg')">Add to
+                                cart</button>
+
+            </div>
+        </div>
+       </div>
+       </div>
+       <div class="cart" id="mycart">
+        <div class="cartheader" id='chead'>
+            <h5 class="cartheadertext">My cart</h5>
+            <button class="closecart"  onclick="hideCart()">
+                 &#10005
+            </button>
+        </div>
+        
+       </div>
+   </section>
+
+
+</body>
+</html>
